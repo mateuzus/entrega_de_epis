@@ -1,0 +1,224 @@
+<thf-page-dynamic-search class="search" t-title=" " [t-filters]="filters" (t-change-disclaimers)="onChangeDisclaimers($event)"
+  (t-quick-search)="onQuickSearch($event)" (t-advanced-search)="onAdvancedSearch($event, true)">
+  <div class="buttons">
+    <thf-button class="incluir" t-type="primary" [hidden]="!nameFunc" t-label="Incluir" (t-click)="abrirModalAdd()"></thf-button>
+    <thf-button class="atender" t-type="primary" [hidden]="!nameFunc" t-label="Atender vários" (t-click)="atenderVarios()"></thf-button>
+    <thf-button class="detalhes" t-label="Detalhes" [hidden]="!nameFunc" t-type="primary" (t-click)="funcDetail()"></thf-button>
+  </div>
+  
+
+  <div class="thf-row divFunc">
+      <div id="subtitle" class="subtitle">{{ cdnFunc }} - {{ nameFunc }}</div>
+  </div>
+
+  <thf-table detailHideSelect="true" t-checkbox="true" t-sort="true" t-striped="true" [t-columns]="tableColumns" [t-items]="tableData">
+  </thf-table>
+
+  <thf-modal t-click-out="true" t-size="xl" t-title="{{ title }}" [t-primary-action]="getPrimaryAction()"
+    [t-secondary-action]="getSecondaryAction()">
+    <div [style.display]="modal_type != 'getAssignature' ? 'block' : 'none'">
+      <div>
+        <div *ngIf="modal_type == 'detail' || modal_type == 'delete'">
+          <div *ngIf="registro_selecionado">
+            <div class="thf-row">
+              <thf-input class="thf-md-4" name="cdn-funcionario" [(ngModel)]="registro_selecionado['cdn-funcionario']"
+                t-label="CDN Funcionário" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-input class="thf-md-4" name="cdn-empresa" [(ngModel)]="registro_selecionado['cdn-empresa']"
+                t-label="CDN Empresa" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-input class="thf-md-4" name="cod-estabel" [(ngModel)]="codEstabelecimento"
+                t-label="COD. Estabelecimento" t-disabled="true" t-required="true">
+              </thf-input>
+            </div>
+            <div class="thf-row">
+              <thf-input class="thf-md-2" name="cod-epi" [(ngModel)]="registro_selecionado['cod-epi']"
+                t-label="Cód. EPI" t-disabled="true" t-required="true"></thf-input>
+
+              <thf-input class="thf-md-6" name="desc-epi" [(ngModel)]="registro_selecionado['desc-epi']" t-label="EPI"
+                t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-input class="thf-md-4" name="cdn-fornecedor" [(ngModel)]="registro_selecionado['cdn-fornecedor']"
+                t-label="CDN Fornecedor" t-disabled="true" t-required="true">
+              </thf-input>
+            </div>
+            <div class="thf-row">
+              <thf-input class="thf-md-6" name="dat-entreg-epi" t-label="Data de entrega"
+                [(ngModel)]="registro_selecionado['dat-entreg-epi']" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-radio-group class="thf-md-6" name="tipo-autentic" t-label="Meio de autenticação"
+                [t-options]="authentication_type_options" t-disabled="true"
+                [(ngModel)]="registro_selecionado['tipo-autentic']" t-required="true">
+              </thf-radio-group>
+            </div>
+            <div class="thf-row">
+              <div *ngIf="registro_selecionado['autenticacao-1']" style="text-align: right" class="thf-lg-6">
+                <img [src]="registro_selecionado['autenticacao-1']" style="max-width: 100%; height: auto" />
+              </div>
+              <div *ngIf="registro_selecionado['autenticacao-2']" style="text-align: right" class="thf-lg-6">
+                <img [src]="registro_selecionado['autenticacao-2']" style="max-width: 100%; height: auto" />
+              </div>
+            </div>
+            <div class="thf-row">
+              <thf-input class="thf-md-3" name="cod-usuar-trans" [(ngModel)]="registro_selecionado['cod-usuar-trans']"
+                t-label="Usuário Transferência" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-input class="thf-md-3" name="nom-usu-trans" [(ngModel)]="registro_selecionado['nom-usu-trans']"
+                t-label="Usuário Transferência" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-datepicker class="thf-md-3" name="data-trans" t-label="Data Transferência"
+                [(ngModel)]="registro_selecionado['data-trans']" t-disabled="true" t-required="true">
+              </thf-datepicker>
+
+              <thf-input class="thf-md-3" name="hora-trans" [(ngModel)]="registro_selecionado['hora-trans']"
+                t-label="Hora da transferência" t-disabled="true" t-required="true">
+              </thf-input>
+            </div>
+            <div class="thf-row">
+              <thf-input class="thf-md-4" name="qtd-entreg-epi" [(ngModel)]="registro_selecionado['qtd-entreg-epi']"
+                t-label="Quantidade entregue" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-input class="thf-md-4" name="log-epi-novo" [(ngModel)]="registro_selecionado['log-epi-novo']"
+                t-label="EPI Novo" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-input class="thf-md-4" name="unid-med-epi" [(ngModel)]="registro_selecionado['unid-med-epi']"
+                t-label="Unidade de medida Epi" t-disabled="true" t-required="true">
+              </thf-input>
+            </div>
+            <div class="thf-row">
+              <thf-datepicker class="thf-md-3" name="dat-devol-epi" t-label="Data Devolução"
+                [(ngModel)]="registro_selecionado['dat-devol-epi']" t-disabled="true" t-required="true">
+              </thf-datepicker>
+
+              <thf-input class="thf-md-3" name="qtd-devol-epi" [(ngModel)]="registro_selecionado['qtd-devol-epi']"
+                t-label="Quantidade Devolução" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-input class="thf-md-3" name="dat-subst-epi" t-label="Data Substituição"
+                [(ngModel)]="registro_selecionado['dat-subst-epi']" t-disabled="true" t-required="true">
+              </thf-input>
+
+              <thf-input class="thf-md-3" name="assin-recib-epi" [(ngModel)]="registro_selecionado['assin-recib-epi']"
+                t-label="Assina Recebimento" t-disabled="true" t-required="true">
+              </thf-input>
+            </div>
+          </div>
+        </div>
+
+
+        <div *ngIf="modal_type == 'add' || modal_type == 'edit'">
+          <div *ngIf="registro_selecionado">
+            <div class="thf-row">
+              <!-- <thf-number class="thf-md-6 thf-sm-6" name="cdn-funcionario" [(ngModel)]="cdnFunc" t-label="CDN Funcionário"
+                t-required="true" [t-disabled]="modal_type == 'edit'">
+              </thf-number> -->
+              <!-- <thf-input class="thf-md-6 thf-sm-6" name="cod-estabel" [(ngModel)]="codEstabelecimento"
+                t-label="Estabelecimento" t-required="true" [t-disabled]="true">
+              </thf-input> -->
+            </div>
+
+            <div class="thf-row">
+              <thf-input class="thf-md-4 thf-sm-6" t-label="Cod. EPI" [(ngModel)]="registro_selecionado['cod-epi']">
+              </thf-input>
+
+              <thf-button class="thf-md-2 thf-sm-6 but" t-label="Pesquisar" (t-click)="postEpiDesc()">
+              </thf-button>
+
+              <thf-input class="thf-md-6" t-disabled="true" t-label="Desc. Epi Atual" [(ngModel)]="descEpi"
+                [hidden]="modal_type == 'edit'">
+              </thf-input>
+
+              <thf-input class="thf-md-6" t-disabled="true" t-label="Desc. Epi Atual"
+                [(ngModel)]="registro_selecionado['desc-epi']" [hidden]="modal_type == 'add'">
+              </thf-input>
+
+              <thf-input class="thf-md-12" t-disabled="true" t-label="Desc. Epi Atualizado" [(ngModel)]="descEpi"
+                [hidden]="modal_type == 'add'">
+              </thf-input>
+
+
+
+              <thf-select class="thf-md-12" name="cdn-fornecedor" [(ngModel)]="registro_selecionado['cdn-fornecedor']"
+                t-label="CDN Fornecedor" t-required="true" [t-options]="fornecs_list" [t-disabled]="
+                  getFornecsList().length == 0 || modal_type == 'edit'
+                ">
+
+              </thf-select>
+            </div>
+            <div class="thf-row">
+              <thf-input class="thf-md-6 thf-sm-6" name="dat-entreg-epi" t-label="Data de entrega" [(ngModel)]="dateNow"
+                t-required="true" [t-disabled]="false">
+              </thf-input>
+              <!-- <thf-input class="thf-md-6" name="dat-entreg-epi" t-label="Data de entrega" [(ngModel)]="registro_selecionado['dat-entreg-epi']" t-required="true" [t-disabled]="modal_type == 'edit'" t-mask="39/19/9999" >
+                            </thf-input> -->
+              <thf-number class="thf-md-6 thf-sm-6" name="qtd-entreg-epi" [(ngModel)]="qtd" t-label="Qtd. Entregue"
+                t-required="true" [t-disabled]="modal_type == 'edit'">
+              </thf-number>
+            </div>
+            <div class="thf-row">
+              <thf-input class="thf-md-6" name="unid-med-epi" [(ngModel)]="registro_selecionado['unid-med-epi']"
+                t-label="Unidade de medida Epi" t-required="true" t-disabled="true">
+              </thf-input>
+              <!-- <thf-input class="thf-md-6" t-mask="dd/mm/YYYY" name="dat-subst-epi" t-label="Data Substituição"
+                [(ngModel)]="registro_selecionado['dat-subst-epi']" t-required="false">
+              </thf-input> -->
+            </div>
+          </div>
+        </div>
+        <div *ngIf="modal_type == 'attend'">
+          <thf-radio-group name="radioGroupBasic" t-label="Meio de autenticação"
+            [t-options]="authentication_type_options" t-required="true" [(ngModel)]="authentication_type">
+          </thf-radio-group>
+        </div>
+      </div>
+    </div>
+    <div [style.display]="modal_type == 'getAssignature' ? 'block' : 'none'">
+      <canvas #canvas width="700" height="350" (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
+      <br />
+      <div class="thf-row">
+        <div *ngIf="assignature1" class="thf-lg-6">
+          <br />
+          <h2>Assinatura 1</h2>
+          <br />
+          <img [src]="assignature1" style="max-width: 100%; height: auto" />
+        </div>
+        <div *ngIf="assignature2" class="thf-lg-6">
+          <br />
+          <h2>Assinatura 2</h2>
+          <br />
+          <img [src]="assignature2" style="max-width: 100%; height: auto" />
+        </div>
+      </div>
+      <br />
+      <thf-button t-label="Limpar" (t-click)="clearPad()"> </thf-button>
+      <thf-button t-label="Comparar" (t-click)="compareImage()"> </thf-button>
+      <br />
+      <!-- <img *ngIf="img" [src]="img"> -->
+      <br />
+    </div>
+
+    <div *ngIf="modal_type == 'funcDetail'">
+      <thf-input class="thf-md-4" t-label="Unidade Lotação" [(ngModel)]="undLotac" t-disabled></thf-input>
+      <thf-input class="thf-md-4" t-label="Códido Cargo" [(ngModel)]="codCargo" t-disabled></thf-input>
+      <thf-input class="thf-md-4" t-label="Data Admissão" [(ngModel)]="dateAdm" t-disabled></thf-input>
+      <thf-input class="thf-md-6" t-label="Descrição Unidade Lotação" [(ngModel)]="descUnid" t-disabled></thf-input>
+      <thf-input class="thf-md-6" t-label="Descrição Cargo" [(ngModel)]="desCargo" t-disabled></thf-input>
+    </div>
+
+    <!-- <ul *ngFor="let extra of extraInformation?.extras">
+      <li class="thf-font-text">{{ extra }}</li>
+      <hr>
+    </ul> -->
+  </thf-modal>
+
+  <thf-loading-overlay *ngIf="getShowLoading()" t-screen-lock="true">
+  </thf-loading-overlay>
+</thf-page-dynamic-search>

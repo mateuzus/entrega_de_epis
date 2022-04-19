@@ -1,0 +1,78 @@
+<thf-page-edit [t-disable-submit]="can_submit" [t-title]="'Cadastrar biometria'">
+    <form>
+        <div class="thf-row">
+            <thf-input class="thf-md-6" name="empresa" [(ngModel)]="empresa" t-label="Empresa" t-required="true">
+            </thf-input>
+
+            <thf-input class="thf-md-6" name="estabel" [(ngModel)]="estabel" t-label="Estabelecimento" t-required="true">
+            </thf-input>
+        </div>
+
+        <div class="thf-row">
+            <thf-number class="thf-md-6" name="cdn_func" [(ngModel)]="cdn_funcionario" t-min="0" t-label="Matrícula do funcionário" t-required="true">
+            </thf-number>
+            <!-- <thf-input class="thf-md-6" name="cdn_func" [(ngModel)]="cdn_funcionario" t-label="Matrícula do funcionário" t-required="true">
+            </thf-input> -->
+            <thf-input t-disabled="true" class="thf-md-6" name="func" [(ngModel)]="funcionario" t-label="Nome do funcionário" t-required="true">
+            </thf-input>
+        </div>
+
+        <div class="thf-row" style="padding-bottom: 10px;">
+            <div class="thf-md-12" style="text-align: right;">
+                <thf-button t-label="Buscar" (t-click)="searchFunc()"> </thf-button>
+            </div>
+        </div>
+
+        <thf-button *ngIf="deviceConnected" t-label="Ler digital" (t-click)="scannerFingerPrint()">
+        </thf-button>
+
+        <thf-button *ngIf="!deviceConnected" t-label="Conectar ao leitor" (t-click)="connectBluetoothDevice()">
+        </thf-button>
+
+        <div class="thf-row">
+            <div *ngIf="assignature1" style="text-align: right" class="thf-lg-6">
+
+                <thf-button t-label="Remover assinatura" t-type="danger" (t-click)="removeAssignature('assignature1')">
+                </thf-button>
+                <br><br>
+                <img [src]="assignature1" style="max-width: 100%;height: auto;">
+            </div>
+            <div *ngIf="assignature2" style="text-align: right" class="thf-lg-6">
+                <thf-button t-label="Remover assinatura" t-type="danger" (t-click)="removeAssignature('assignature2')">
+                </thf-button>
+                <br><br>
+                <img [src]="assignature2" style="max-width: 100%;height: auto;">
+            </div>
+        </div>
+        <br>
+        <div class="thf-row">
+            <thf-button *ngIf="(!assignature1 || !assignature2) " t-label="Adicionar assinatura" (t-click)="openModalAssinatura()">
+            </thf-button>
+        </div>
+
+    </form>
+
+    <thf-modal t-click-out="true" t-size="sm" t-title="Adicionar assinatura" [t-primary-action]="getPrimaryAction()" [t-secondary-action]="getSecondaryAction()">
+        <div>
+            <!-- <canvas id="sig-canvas" #sigPad width="700" height="350" (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)" (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas> -->
+            <canvas #canvas width="700" height="350" (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
+            <br/>
+            <thf-button t-label="Limpar" (t-click)="clearPad()"> </thf-button>
+            <!-- <thf-button t-label="Adicionar" (t-click)="saveImage()"> </thf-button> -->
+            <br/>
+            <!-- <img *ngIf="img" [src]="img"> -->
+            <br/>
+        </div>
+
+
+        <!-- <ul *ngFor="let extra of extraInformation?.extras">
+            <li class="thf-font-text">{{ extra }}</li>
+            <hr>
+        </ul> -->
+
+    </thf-modal>
+
+    <thf-loading-overlay *ngIf="getShowLoading()" t-screen-lock="true">
+    </thf-loading-overlay>
+
+</thf-page-edit>

@@ -1,0 +1,296 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "codigo": "01",
+      "name": "Han Solo",
+      "email": "han@totvs.com.br",
+      "phone": "+55 430 123 234",
+      "status": "crimson",
+      "nationality": "kamino",
+      "birthday": "2018-07-04T09:27:16-03:00",
+      "personality": [
+        "Crafter",
+        "Protetor"
+      ],
+      "lookup": "Y-wing"
+    },
+    {
+      "id": 2,
+      "codigo": "02",
+      "name": "Leia Organa",
+      "email": "leia@totvs.com.br",
+      "phone": "+55 353 535 677",
+      "status": "cloud",
+      "birthday": "1997-07-15T09:27:38-03:00",
+      "nationality": "deathstar",
+      "personality": [
+        "Idealista",
+        "Controlador"
+      ],
+      "lookup": "Death Star"
+    },
+    {
+      "id": 3,
+      "codigo": "03",
+      "name": "Rey Kenobi",
+      "email": "rey@totvs.com.br",
+      "phone": "+55 129 039 391",
+      "status": "pyke",
+      "birthday": "1961-07-07T09:28:12-03:00",
+      "nationality": "deathstar",
+      "personality": [
+        "Protetor",
+        "Performer"
+      ],
+      "lookup": "EF76 Nebulon-B escort frigate"
+    },
+    {
+      "id": 4,
+      "codigo": "04",
+      "name": "Obi-Wan Kenobi",
+      "email": "kenobi@totvs.com.br",
+      "phone": "+55 094 585 060",
+      "status": "galactic",
+      "birthday": "1944-09-13T09:35:30-03:00",
+      "personality": [
+        "Inventor",
+        "Controlador"
+      ],
+      "lookup": "Slave 1"
+    },
+    {
+      "id": 5,
+      "codigo": "05",
+      "name": "Luke Skywalker",
+      "email": "luke@totvs.com.br",
+      "phone": "+55 123 154 837",
+      "status": "crimson",
+      "birthday": "1963-07-11T09:35:52-03:00",
+      "nationality": "kamino",
+      "personality": [
+        "Protetor",
+        "Crafter",
+        "Idealista"
+      ],
+      "lookup": "Imperial shuttle"
+    }
+  ],
+  "spaceships": [
+    {
+      "label": "DS-1 Orbital Battle Station",
+      "value": 1495831666871,
+      "nickname": "Death Star"
+    },
+    {
+      "label": "Executor-class star dreadnought",
+      "value": 1495831698598,
+      "nickname": "Executor"
+    },
+    {
+      "label": "Sentinel-class landing craft",
+      "value": 1495832596999,
+      "nickname": "Sentinel-class landing craft"
+    },
+    {
+      "label": "YT-1300 light freighter",
+      "value": 1495832652942,
+      "nickname": "Millennium Falcon"
+    },
+    {
+      "label": "BTL Y-wing",
+      "value": 1495832683682,
+      "nickname": "Y-wing"
+    },
+    {
+      "label": "T-65 X-wing",
+      "value": 1495833068594,
+      "nickname": "X-wing"
+    },
+    {
+      "label": "TIE Advanced x1",
+      "value": 1495833068595,
+      "nickname": "Viuva Negra"
+    },
+    {
+      "label": "Firespray-31-class patrol and attack",
+      "value": 1495833068596,
+      "nickname": "Slave 1"
+    },
+    {
+      "label": "Lambda-class T-4a shuttle",
+      "value": 1495833068597,
+      "nickname": "Imperial shuttle"
+    },
+    {
+      "label": "EF76 Nebulon-B escort frigate",
+      "value": 1495833068598,
+      "nickname": "EF76 Nebulon-B escort frigate"
+    },
+    {
+      "label": "Digger Crawler",
+      "value": 1495833068597,
+      "nickname": "Sand Crawler"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "date": "2018-10-05T14:48:00.000Z",
+      "status": "",
+      "total": 150000
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "productId": 1,
+      "unitPrice": 150000,
+      "quantity": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Sand Crawler",
+      "model": "Digger Crawler",
+      "manufacturer": "Corellia Mining Corporation",
+      "cost_in_credits": "150000",
+      "length": "36.8",
+      "max_atmosphering_speed": "30",
+      "crew": "46",
+      "passengers": "30",
+      "cargo_capacity": "50000",
+      "consumables": "2 months",
+      "vehicle_class": "wheeled"
+    },
+    {
+      "ïd": 2,
+      "name": "T-16 skyhopper",
+      "model": "T-16 skyhopper",
+      "manufacturer": "Incom Corporation",
+      "cost_in_credits": "14500",
+      "length": "10.4",
+      "max_atmosphering_speed": "1200",
+      "crew": "1",
+      "passengers": "1",
+      "cargo_capacity": "50",
+      "consumables": "0",
+      "vehicle_class": "repulsorcraft"
+    },
+    {
+      "id": 3,
+      "name": "X-34 landspeeder",
+      "model": "X-34 landspeeder",
+      "manufacturer": "SoroSuub Corporation",
+      "cost_in_credits": "10550",
+      "length": "3.4",
+      "max_atmosphering_speed": "250",
+      "crew": "1",
+      "passengers": "1",
+      "cargo_capacity": "5",
+      "consumables": "unknown",
+      "vehicle_class": "repulsorcraft"
+    },
+    {
+      "id": 4,
+      "name": "TIE/LN starfighter",
+      "model": "Twin Ion Engine/Ln Starfighter",
+      "manufacturer": "Sienar Fleet Systems",
+      "cost_in_credits": "unknown",
+      "length": "6.4",
+      "max_atmosphering_speed": "1200",
+      "crew": "1",
+      "passengers": "0",
+      "cargo_capacity": "65",
+      "consumables": "2 days",
+      "vehicle_class": "starfighter"
+    },
+    {
+      "id": 5,
+      "name": "Snowspeeder",
+      "model": "t-47 airspeeder",
+      "manufacturer": "Incom corporation",
+      "cost_in_credits": "unknown",
+      "length": "4.5",
+      "max_atmosphering_speed": "650",
+      "crew": "2",
+      "passengers": "0",
+      "cargo_capacity": "10",
+      "consumables": "none",
+      "vehicle_class": "airspeeder"
+    },
+    {
+      "id": 6,
+      "name": "TIE bomber",
+      "model": "TIE/sa bomber",
+      "manufacturer": "Sienar Fleet Systems",
+      "cost_in_credits": "unknown",
+      "length": "7.8",
+      "max_atmosphering_speed": "850",
+      "crew": "1",
+      "passengers": "0",
+      "cargo_capacity": "none",
+      "consumables": "2 days",
+      "vehicle_class": "space/planetary bomber"
+    },
+    {
+      "id": 7,
+      "name": "AT-AT",
+      "model": "All Terrain Armored Transport",
+      "manufacturer": "Kuat Drive Yards, Imperial Department of Military Research",
+      "cost_in_credits": "unknown",
+      "length": "20",
+      "max_atmosphering_speed": "60",
+      "crew": "5",
+      "passengers": "40",
+      "cargo_capacity": "1000",
+      "consumables": "unknown",
+      "vehicle_class": "assault walker"
+    },
+    {
+      "id": 8,
+      "name": "AT-ST",
+      "model": "All Terrain Scout Transport",
+      "manufacturer": "Kuat Drive Yards, Imperial Department of Military Research",
+      "cost_in_credits": "unknown",
+      "length": "2",
+      "max_atmosphering_speed": "90",
+      "crew": "2",
+      "passengers": "0",
+      "cargo_capacity": "200",
+      "consumables": "none",
+      "vehicle_class": "walker"
+    },
+    {
+      "id": 9,
+      "name": "Storm IV Twin-Pod cloud car",
+      "model": "Storm IV Twin-Pod",
+      "manufacturer": "Bespin Motors",
+      "cost_in_credits": "75000",
+      "length": "7",
+      "max_atmosphering_speed": "1500",
+      "crew": "2",
+      "passengers": "0",
+      "cargo_capacity": "10",
+      "consumables": "1 day",
+      "vehicle_class": "repulsorcraft"
+    },
+    {
+      "id": 10,
+      "name": "Sail barge",
+      "model": "Modified Luxury Sail Barge",
+      "manufacturer": "Ubrikkian Industries Custom Vehicle Division",
+      "cost_in_credits": "285000",
+      "length": "30",
+      "max_atmosphering_speed": "100",
+      "crew": "26",
+      "passengers": "500",
+      "cargo_capacity": "2000000",
+      "consumables": "Live food tanks",
+      "vehicle_class": "sail barge"
+    }
+  ]
+}

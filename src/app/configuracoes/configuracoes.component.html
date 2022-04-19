@@ -1,0 +1,20 @@
+<thf-page-default t-title="Configurações">
+      <div class="thf-row" id="content">
+        <div class="thf-sm-6">
+          <label>Empresa padrão</label>
+          <input type="text" class="form-control" name="empresa" id="empresa" value="1" [(ngModel)]="empresa">
+        </div>
+
+        <div class="thf-sm-6">
+          <label>Estabel. padrão</label>
+          <input type="text" class="form-control" name="estabelecimento" id="estabelecimento" value="1" [(ngModel)]="estabelecimento">
+        </div>
+      </div>
+
+
+
+    <div class="thf-row" id="salvar">
+        <thf-button t-type="primary" class="thf-md-3 thf-sm-12" t-label="Salvar" (t-click)="salvar()">
+        </thf-button>
+    </div>
+</thf-page-default>

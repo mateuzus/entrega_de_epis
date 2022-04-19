@@ -1,0 +1,96 @@
+canvas {
+  border: 1px solid #000;
+  /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+  /* width: 100%;
+    height: 100%; */
+}
+
+img {
+  border: 1px solid #000;
+}
+
+span {
+  width: 300px;
+}
+
+.divFunc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.tableDetails{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.tableItems{
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  color: #0c9abe;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.descEpi{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.but{
+  margin-top: 32px;
+}
+
+.incluir {
+  margin-right: 10px;
+}
+
+.atender {
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .incluir {
+    margin-right: 10px;
+  }
+
+  .atender {
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .search {
+    margin-top: 50px;
+  }
+
+  .incluir {
+    margin-right: 10px;
+  }
+
+  .atender {
+    margin-right: 10px;
+  }
+}

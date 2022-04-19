@@ -1,0 +1,764 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "codigo": "01",
+      "name": "Han Solo",
+      "email": "han@totvs.com.br",
+      "phone": "+55 430 123 234",
+      "status": "crimson",
+      "nationality": "kamino",
+      "birthday": "2018-07-04T09:27:16-03:00",
+      "personality": [
+        "Crafter",
+        "Protetor"
+      ]
+    },
+    {
+      "id": 2,
+      "codigo": "02",
+      "name": "Leia Organa",
+      "email": "leia@totvs.com.br",
+      "phone": "+55 353 535 677",
+      "status": "cloud",
+      "birthday": "1997-07-15T09:27:38-03:00",
+      "nationality": "deathstar",
+      "personality": [
+        "Idealista",
+        "Controlador"
+      ],
+      "lookup": "Death Star"
+    },
+    {
+      "id": 3,
+      "codigo": "03",
+      "name": "Rey Kenobi",
+      "email": "rey@totvs.com.br",
+      "phone": "+55 129 039 391",
+      "status": "pyke",
+      "birthday": "1961-07-07T09:28:12-03:00",
+      "nationality": "deathstar",
+      "personality": [
+        "Protetor",
+        "Performer"
+      ],
+      "lookup": "EF76 Nebulon-B escort frigate"
+    },
+    {
+      "id": 4,
+      "codigo": "04",
+      "name": "Obi-Wan Kenobi",
+      "email": "kenobi@totvs.com.br",
+      "phone": "+55 094 585 060",
+      "status": "galactic",
+      "birthday": "1944-09-13T09:35:30-03:00",
+      "personality": [
+        "Inventor",
+        "Controlador"
+      ],
+      "lookup": "Slave 1"
+    },
+    {
+      "id": 5,
+      "codigo": "05",
+      "name": "Luke Skywalker",
+      "email": "luke@totvs.com.br",
+      "phone": "+55 123 154 837",
+      "status": "crimson",
+      "birthday": "1963-07-11T09:35:52-03:00",
+      "nationality": "kamino",
+      "personality": [
+        "Protetor",
+        "Crafter",
+        "Idealista"
+      ],
+      "lookup": "Imperial shuttle"
+    }
+  ],
+  "spaceships": [
+    {
+      "label": "DS-1 Orbital Battle Station",
+      "value": 1495831666871,
+      "nickname": "Death Star"
+    },
+    {
+      "label": "Executor-class star dreadnought",
+      "value": 1495831698598,
+      "nickname": "Executor"
+    },
+    {
+      "label": "Sentinel-class landing craft",
+      "value": 1495832596999,
+      "nickname": "Sentinel-class landing craft"
+    },
+    {
+      "label": "YT-1300 light freighter",
+      "value": 1495832652942,
+      "nickname": "Millennium Falcon"
+    },
+    {
+      "label": "BTL Y-wing",
+      "value": 1495832683682,
+      "nickname": "Y-wing"
+    },
+    {
+      "label": "T-65 X-wing",
+      "value": 1495833068594,
+      "nickname": "X-wing"
+    },
+    {
+      "label": "TIE Advanced x1",
+      "value": 1495833068595,
+      "nickname": "Viuva Negra"
+    },
+    {
+      "label": "Firespray-31-class patrol and attack",
+      "value": 1495833068596,
+      "nickname": "Slave 1"
+    },
+    {
+      "label": "Lambda-class T-4a shuttle",
+      "value": 1495833068597,
+      "nickname": "Imperial shuttle"
+    },
+    {
+      "label": "EF76 Nebulon-B escort frigate",
+      "value": 1495833068598,
+      "nickname": "EF76 Nebulon-B escort frigate"
+    },
+    {
+      "label": "Digger Crawler",
+      "value": 1495833068597,
+      "nickname": "Sand Crawler"
+    }
+  ],
+  "orders": [
+    {
+      "total": 145000,
+      "items": [
+        {
+          "quantity": "10",
+          "unitPrice": 14500,
+          "productId": 2,
+          "productName": "T-16 skyhopper"
+        }
+      ],
+      "date": "2018-10-29T10:11:30-03:00",
+      "status": "1",
+      "customerId": 4,
+      "id": 1
+    },
+    {
+      "total": 14344950,
+      "items": [
+        {
+          "quantity": "50",
+          "unitPrice": 285000,
+          "productId": 5,
+          "productName": "Sail barge"
+        },
+        {
+          "quantity": "9",
+          "unitPrice": 10550,
+          "productId": 3,
+          "productName": "X-34 landspeeder"
+        }
+      ],
+      "date": "2018-10-29T10:15:46-03:00",
+      "status": "2",
+      "customerId": 4,
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Sand Crawler",
+      "model": "Digger Crawler",
+      "manufacturer": "Corellia Mining Corporation",
+      "price": 150000,
+      "length": "36.8",
+      "max_atmosphering_speed": "30",
+      "crew": "46",
+      "passengers": "30",
+      "cargo_capacity": "50000",
+      "consumables": "2 months",
+      "vehicle_class": "wheeled"
+    },
+    {
+      "id": 2,
+      "name": "T-16 skyhopper",
+      "model": "T-16 skyhopper",
+      "manufacturer": "Incom Corporation",
+      "price": 14500,
+      "length": "10.4",
+      "max_atmosphering_speed": "1200",
+      "crew": "1",
+      "passengers": "1",
+      "cargo_capacity": "50",
+      "consumables": "0",
+      "vehicle_class": "repulsorcraft"
+    },
+    {
+      "id": 3,
+      "name": "X-34 landspeeder",
+      "model": "X-34 landspeeder",
+      "manufacturer": "SoroSuub Corporation",
+      "price": 10550,
+      "length": "3.4",
+      "max_atmosphering_speed": "250",
+      "crew": "1",
+      "passengers": "1",
+      "cargo_capacity": "5",
+      "consumables": "unknown",
+      "vehicle_class": "repulsorcraft"
+    },
+    {
+      "id": 4,
+      "name": "Storm IV Twin-Pod cloud car",
+      "model": "Storm IV Twin-Pod",
+      "manufacturer": "Bespin Motors",
+      "price": 75000,
+      "length": "7",
+      "max_atmosphering_speed": "1500",
+      "crew": "2",
+      "passengers": "0",
+      "cargo_capacity": "10",
+      "consumables": "1 day",
+      "vehicle_class": "repulsorcraft"
+    },
+    {
+      "id": 5,
+      "name": "Sail barge",
+      "model": "Modified Luxury Sail Barge",
+      "manufacturer": "Ubrikkian Industries Custom Vehicle Division",
+      "price": 285000,
+      "length": "30",
+      "max_atmosphering_speed": "100",
+      "crew": "26",
+      "passengers": "500",
+      "cargo_capacity": "2000000",
+      "consumables": "Live food tanks",
+      "vehicle_class": "sail barge"
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "processID": "1",
+      "description": "Exemplo de agendamento"
+    }
+  ],
+  "parameters": [
+    {
+      "property": "server",
+      "processId": 1
+    },
+    {
+      "property": "program",
+      "processId": 1
+    }
+  ],
+  "metadata": [
+    {
+      "id": "customers",
+      "version": 1,
+      "type": "list",
+      "title": "Customers",
+      "breadcrumb": {
+        "items": [
+          {
+            "label": "Customers"
+          }
+        ]
+      },
+      "actions": {
+        "detail": "customers-template/detail/:id",
+        "edit": "customers-template/edit/:id",
+        "new": "customers-template/new",
+        "remove": true
+      },
+      "fields": [
+        {
+          "property": "id",
+          "label": "Code",
+          "key": true
+        },
+        {
+          "property": "name"
+        },
+        {
+          "property": "email",
+          "label": "E-mail"
+        },
+        {
+          "property": "phone"
+        }
+      ]
+    },
+    {
+      "id": "customers",
+      "version": 1,
+      "type": "create",
+      "title": "Add New Customer",
+      "actions": {
+        "save": "customers-template/",
+        "cancel": "customers-template/"
+      },
+      "breadcrumb": {
+        "items": [
+          {
+            "label": "Customers",
+            "link": "customers-template/"
+          },
+          {
+            "label": "New Customer"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "property": "name",
+          "required": true
+        },
+        {
+          "property": "email",
+          "label": "E-mail",
+          "required": true
+        },
+        {
+          "property": "phone",
+          "label": "Phone",
+          "required": true,
+          "mask": "(99) 99999?-9999"
+        },
+        {
+          "property": "birthday",
+          "label": "Birth date",
+          "type": "date"
+        },
+        {
+          "property": "nationality",
+          "options": [
+            {
+              "label": "Coruscant",
+              "value": "coruscant"
+            },
+            {
+              "label": "Death Star",
+              "value": "deathstar"
+            },
+            {
+              "label": "Kamino",
+              "value": "kamino"
+            },
+            {
+              "label": "Naboo",
+              "value": "naboo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "customers",
+      "version": 1,
+      "type": "edit",
+      "title": "Edit Customer",
+      "actions": {
+        "save": "customers-template/",
+        "cancel": "customers-template/"
+      },
+      "breadcrumb": {
+        "items": [
+          {
+            "label": "Customers",
+            "link": "customers-template/"
+          },
+          {
+            "label": "Edit Customer"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "property": "name",
+          "required": true
+        },
+        {
+          "property": "email",
+          "label": "E-mail",
+          "required": true
+        },
+        {
+          "property": "phone",
+          "label": "Phone",
+          "required": true,
+          "mask": "(99) 99999?-9999"
+        },
+        {
+          "property": "birthday",
+          "label": "Birth date",
+          "type": "date"
+        },
+        {
+          "property": "nationality",
+          "options": [
+            {
+              "label": "Coruscant",
+              "value": "coruscant"
+            },
+            {
+              "label": "Death Star",
+              "value": "deathstar"
+            },
+            {
+              "label": "Kamino",
+              "value": "kamino"
+            },
+            {
+              "label": "Naboo",
+              "value": "naboo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "customers",
+      "version": 1,
+      "type": "detail",
+      "title": "Customer Detail",
+      "actions": {
+        "edit": "customers-template/edit/:id"
+      },
+      "breadcrumb": {
+        "items": [
+          {
+            "label": "Customers",
+            "link": "customers-template/"
+          },
+          {
+            "label": "Customer Detail"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "property": "id",
+          "tag": true,
+          "label": "Code"
+        },
+        {
+          "property": "name",
+          "required": true
+        },
+        {
+          "property": "email",
+          "label": "E-mail",
+          "required": true
+        },
+        {
+          "property": "phone",
+          "label": "Phone",
+          "required": true,
+          "mask": "(99) 99999?-9999"
+        },
+        {
+          "property": "birthday",
+          "label": "Birth date",
+          "type": "date"
+        },
+        {
+          "property": "nationality",
+          "options": [
+            {
+              "label": "Coruscant",
+              "value": "coruscant"
+            },
+            {
+              "label": "Death Star",
+              "value": "deathstar"
+            },
+            {
+              "label": "Kamino",
+              "value": "kamino"
+            },
+            {
+              "label": "Naboo",
+              "value": "naboo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orders",
+      "version": 1,
+      "type": "list",
+      "title": "Orders",
+      "breadcrumb": {
+        "items": [
+          {
+            "label": "Orders"
+          }
+        ]
+      },
+      "actions": {
+        "detail": "orders-template/detail/:id",
+        "edit": "orders-template/edit/:id",
+        "new": "orders-template/new",
+        "remove": true
+      },
+      "fields": [
+        {
+          "property": "status"
+        },
+        {
+          "property": "id",
+          "label": "Code",
+          "key": true
+        },
+        {
+          "property": "customerName",
+          "label": "Customer"
+        },
+        {
+          "property": "total"
+        }
+      ]
+    },
+    {
+      "id": "orders",
+      "version": 1,
+      "type": "create",
+      "title": "Add New Order",
+      "actions": {
+        "save": "orders-template/",
+        "cancel": "orders-template/"
+      },
+      "breadcrumb": {
+        "items": [
+          {
+            "label": "Orders",
+            "link": "orders-template/"
+          },
+          {
+            "label": "New Order"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "property": "customer",
+          "required": true
+        },
+        {
+          "property": "status",
+          "required": true,
+          "options": [
+            {
+              "label": "Pending",
+              "value": "1"
+            },
+            {
+              "label": "Cancelled",
+              "value": "2"
+            },
+            {
+              "label": "Completed",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "property": "date",
+          "type": "date"
+        },
+        {
+          "property": "items",
+          "type": "detail",
+          "divider": "Items",
+          "detail": {
+            "columns": [
+              {
+                "property": "productName",
+                "label": "Product",
+                "align": "left"
+              },
+              {
+                "property": "quantity",
+                "label": "Quantity",
+                "required": true,
+                "width": 200,
+                "align": "right"
+              },
+              {
+                "property": "unitPrice",
+                "label": "Price",
+                "required": true,
+                "align": "rigth",
+                "width": 250
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "orders",
+      "version": 1,
+      "type": "edit",
+      "title": "Edit Order",
+      "actions": {
+        "save": "orders-template/",
+        "cancel": "orders-template/"
+      },
+      "breadcrumb": {
+        "items": [
+          {
+            "label": "Orders",
+            "link": "orders-template/"
+          },
+          {
+            "label": "Edit Order"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "property": "customer",
+          "required": true
+        },
+        {
+          "property": "status",
+          "required": true,
+          "options": [
+            {
+              "label": "Pending",
+              "value": "1"
+            },
+            {
+              "label": "Cancelled",
+              "value": "2"
+            },
+            {
+              "label": "Completed",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "property": "date",
+          "type": "date"
+        },
+        {
+          "property": "items",
+          "type": "detail",
+          "divider": "Items",
+          "detail": {
+            "columns": [
+              {
+                "property": "productName",
+                "label": "Product",
+                "align": "left"
+              },
+              {
+                "property": "quantity",
+                "label": "Quantity",
+                "required": true,
+                "width": 200,
+                "align": "right"
+              },
+              {
+                "property": "unitPrice",
+                "label": "Price",
+                "required": true,
+                "align": "rigth",
+                "width": 250,
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "orders",
+      "version": 1,
+      "type": "detail",
+      "title": "Order Detail",
+      "actions": {
+        "edit": "orders-template/edit/:id"
+      },
+      "breadcrumb": {
+        "items": [
+          {
+            "label": "Orders",
+            "link": "orders-template/"
+          },
+          {
+            "label": "Order Detail"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "property": "customer",
+          "required": true
+        },
+        {
+          "property": "status",
+          "required": true,
+          "options": [
+            {
+              "label": "Pending",
+              "value": "1"
+            },
+            {
+              "label": "Cancelled",
+              "value": "2"
+            },
+            {
+              "label": "Completed",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "property": "date",
+          "type": "date"
+        },
+        {
+          "property": "items",
+          "type": "detail",
+          "divider": "Items",
+          "detail": {
+            "columns": [
+              {
+                "property": "productName",
+                "label": "Product",
+                "align": "left"
+              },
+              {
+                "property": "quantity",
+                "label": "Quantity",
+                "required": true,
+                "width": 200,
+                "align": "right"
+              },
+              {
+                "property": "unitPrice",
+                "label": "Price",
+                "required": true,
+                "align": "rigth",
+                "width": 250,
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

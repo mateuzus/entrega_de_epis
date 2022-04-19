@@ -1,0 +1,29 @@
+<thf-page-default t-title="Atendendimento">
+
+    <div class="thf-row">
+
+        <thf-input class="thf-md-3" t-readonly="true" t-label="Qtde a Atender" name="qtde_atender" [(ngModel)]="qtde_atender" t-required="true" t-disabled="true">
+        </thf-input>
+
+        <thf-input class="thf-md-3" t-readonly="true" name="data_aten" t-label="Data de atendimento" [(ngModel)]="data_atendimentoo" t-required="true">
+        </thf-input>
+
+        <thf-switch class="thf-md-2" name="agrupar" t-label="Agrupar Lotes WMS" t-label-off="Não" t-label-on="Sim" [(ngModel)]="agrupar_lotes_wms">
+        </thf-switch>
+
+        <!-- <thf-switch class="thf-md-3" name="fechar" t-label="Fechar Item da Requisição?" t-label-off="Não" t-label-on="Sim" [(ngModel)]="fechar_item_requisicao">
+        </thf-switch>-->
+
+        <thf-button class="thf-md-1" (t-click)="submit()" t-label="Salvar" t-type="primary" t-small="true">
+        </thf-button>
+
+    </div>
+
+
+    <thf-grid [t-row-actions]="rowActions" [t-data]="data " [t-columns]="columns">>
+    </thf-grid>
+
+    <thf-loading-overlay *ngIf="getShowLoading()" t-screen-lock="true">
+    </thf-loading-overlay>
+
+</thf-page-default>
